@@ -782,7 +782,7 @@ body {
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-text:hover,
+
 .modal-form-text:focus {
   border-color: var(--accent-color);
 }
