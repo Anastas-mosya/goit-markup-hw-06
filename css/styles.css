@@ -192,7 +192,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  align-items: center;
   letter-spacing: 0.06em;
   color: var(--main-btn-color);
   cursor: pointer;
@@ -202,7 +201,6 @@ body {
   border: transparent;
   min-width: 200px;
   min-height: 50px;
-  margin-top: 30px;
 }
 /*--------FEATURES----------------*/
 .features-list {
@@ -539,16 +537,14 @@ body {
   padding-left: 16px;
 }
 .footer-btn {
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-}
-.footer-btn-text {
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-btn-icon {
-  position: absolute;
+  margin-left: 10px;
 }
+
 /*--------PORTFOLIO----------------*/
 .buttons-list {
   display: flex;
@@ -624,7 +620,10 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+.images-item-progect:hover .images-item-progect-text,
+.images-item-progect:focus .images-item-progect-text {
+  transform: translateY(0);
+}
 .images-item-progect-text {
   position: absolute;
   top: 0;
@@ -641,6 +640,7 @@ body {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .images-contents {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
@@ -730,7 +730,7 @@ body {
   margin-bottom: 12px;
 }
 .modal-field {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .modal-label-text {
   font-weight: 400;
@@ -761,6 +761,8 @@ body {
   padding-left: 41px;
   padding-right: 12px;
   cursor: pointer;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus {
@@ -777,6 +779,12 @@ body {
   border-radius: 4px;
   resize: none;
   padding: 12px 16px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-text:hover,
+.modal-form-text:focus {
+  border-color: var(--accent-color);
 }
 .checkbox-text {
   font-weight: normal;
@@ -785,6 +793,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   display: flex;
+  align-items: center;
 }
 .checkbox-item {
   width: 16px;
@@ -799,6 +808,11 @@ body {
 .modal-checkbox:checked + .checkbox-text .checkbox-item {
   background-color: var(--accent-color);
   border: none;
+}
+.checkbox-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-color);
 }
 .modal-btn {
   display: block;
